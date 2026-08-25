@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "minisearch": "^7.1.2",
-    "next": "16.3.1",
+    "next": "16.3.2",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "zod": "^4.4.3",
@@ -35,7 +35,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.1",
+    "eslint-config-next": "16.3.2",
     "puppeteer-core": "^25.7.0",
     "tailwindcss": "^4",
     "tsx": "^4.23.12",
