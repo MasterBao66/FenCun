@@ -5,7 +5,7 @@
 | 需求 | 渠道 |
 |---|---|
 | 了解产品或本地运行 | [README](../README.md) · [在线体验](https://fencun.vercel.app) |
-| 查看产品范围和决策 | [产品方案](../docs/氛寸-产品方案.md) |
+| 查看架构、规则依据与维护事项 | [技术文档](../docs/技术文档.md) |
 | 报告 Bug | [Bug 报告](https://github.com/MrBaoboer/FenCun/issues/new?template=bug_report.yml) |
 | 提交功能建议 | [功能建议](https://github.com/MrBaoboer/FenCun/issues/new?template=feature_request.yml) |
 | 参与开发 | [贡献指南](CONTRIBUTING.md) |
