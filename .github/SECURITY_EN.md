@@ -23,6 +23,6 @@ Include the affected page or endpoint, reproduction steps, impact assessment, an
 
 - The perfume library, journal, and feedback are stored in the browser's `localStorage`; there is no persistent server-side user database.
 - QWeather and DeepSeek credentials are used only by server-side Route Handlers and are not sent to the browser.
-- `/api/context`, `/api/explain`, and `/api/parse-intent` all have rate limiting and graceful degradation; `/api/explain` and `/api/parse-intent` additionally cap input length.
+- Rate limits, daily gates, origin checks, input caps, and degradation for the three proxy routes are documented in [开发与维护 · API 路由与防线](../docs/开发与维护.md#5-api-路由与防线) (Chinese).
 
 The most valuable areas to look at are therefore the abuse and injection surface of those three proxy routes, any path that could leak server-side credentials, and the dependency chain and build output.

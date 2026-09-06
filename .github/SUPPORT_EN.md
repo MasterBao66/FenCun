@@ -6,6 +6,7 @@
 |---|---|
 | Understand the product or run it locally | [README](../README.md) (Chinese) · [live app](https://fencun.vercel.app) |
 | Review product scope and decisions | [Product plan](../docs/氛寸-产品方案.md) (Chinese) |
+| Development, deployment, and maintenance | [开发与维护](../docs/开发与维护.md) (Chinese) |
 | Report a bug | [Bug report](https://github.com/MrBaoboer/FenCun/issues/new?template=bug_report.yml) |
 | Suggest a feature | [Feature request](https://github.com/MrBaoboer/FenCun/issues/new?template=feature_request.yml) |
 | Contribute code or documentation | [Contributing guide](CONTRIBUTING_EN.md) |
