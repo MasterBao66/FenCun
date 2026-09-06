@@ -1,82 +1,155 @@
 <div align="center">
 
-<br/>
-
 # 氛寸 · Fēn Cùn
 
-**让每一瓶香，都用在它最好的那一刻。**
+### 别人帮你**挑**香水，氛寸帮你**用好**香水
 
-别人帮你挑香水，氛寸帮你用好香水。<br/>
-从你已有的香柜里，告诉你此刻喷哪瓶、喷多少、喷在哪、能留多久、要注意什么，以及为什么。
+一个基于实时情境的个人 **「用香决策」Agent**：<br/>
+从你**已有**的香柜里，告诉你此刻——**喷哪瓶、喷多少、喷在哪、能留多久、要注意什么，以及为什么。**
 
 <br/>
 
-[![在线体验](https://img.shields.io/badge/在线体验-fencun.vercel.app-1a1a1a?style=for-the-badge)](https://fencun.vercel.app)
+[![Live Demo](https://img.shields.io/badge/在线体验-fencun.vercel.app-1a1a1a?style=for-the-badge)](https://fencun.vercel.app)
+
+![Next.js](https://img.shields.io/badge/Next.js-16-000?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38BDF8?logo=tailwindcss&logoColor=white)
+![DeepSeek](https://img.shields.io/badge/DeepSeek-语义层-6C5CE7)
+![Deploy](https://img.shields.io/badge/Vercel-自动部署-000?logo=vercel&logoColor=white)
+![License](https://img.shields.io/badge/License-AGPL--3.0--only-6E4AA8)
 
 <br/>
 
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/today-day-v13.png" width="260" alt="明韵主题下的今日推荐页：推荐卡、分寸建议与情境栏"/><br/><sub>今日之选 · 明韵</sub></td>
-    <td align="center"><img src="docs/screenshots/today-night-v13.png" width="260" alt="暗香主题下的今夜推荐页：同一套推荐卡的深色版本"/><br/><sub>今夜之选 · 暗香</sub></td>
+    <td align="center"><img src="docs/screenshots/today-day-v13.png" width="240" alt="明韵主题下的今日推荐页：推荐卡、分寸建议与情境栏"/><br/><sub><b>今日之选 · 明韵</b></sub></td>
+    <td align="center"><img src="docs/screenshots/today-night-v13.png" width="240" alt="暗香主题下的今夜推荐页：同一套推荐卡的深色版本"/><br/><sub><b>今夜之选 · 暗香</b></sub></td>
   </tr>
 </table>
 
 </div>
 
-<br/>
+---
 
 ## 它解决什么
 
-站在香柜前，你从不缺香水，缺的是「今天到底用哪瓶、怎么用得恰到好处」的判断。
+站在香柜前，你从不缺香水——缺的是「**今天到底用哪瓶、怎么用得恰到好处**」的那个判断。
 
-氛寸不做导购。它把你已有的香柜、此刻的天气与场合放在一起，先推一瓶，再把用法讲清楚：喷几下、喷在哪、隔多远能闻到、能留多久、有什么要留意。不认同就一键换成任意一瓶，用法即时重算。
+- **「今天喷哪瓶」是入口**：你的香柜 × 此刻情境 → 最合适的一瓶，不认同可一键换成任意一瓶，用法即时重算。
+- **「这瓶怎么用」是灵魂**：喷量档位 / 喷洒位置 / 社交距离 / 留香区间 / 风险提示。
 
-## 它会怎么说
+| | 传统香水 App | **氛寸** |
+|---|---|---|
+| 解决的问题 | 买之前——**挑哪瓶** | 买之后——**今天用哪瓶、怎么用** |
+| 输入 | 喜好、预算、评论 | **你已有的香柜 × 实时天气 × 场合** |
+| 输出 | 种草、购买链接 | **可执行的用香建议 + 明确裁决 + 为什么** |
 
-| 情境 | 氛寸 |
-|---|---|
-| 早间通勤，上海 28℃、湿度 80% | 「从你的香柜选**蓝风铃**：清爽柑橘扛这种黏腻天。喷 2 下（手腕＋颈侧），别上身。」 |
-| 输入「见客户」 | 「你选的**信仰之水**在商务场偏稳。但今天室内空调密闭，建议只喷 1 下、喷衣领内侧。」 |
-| 骤降到 12℃ 还下雨 | 「你常喷的清新柑橘会被压住、留不住。香柜里的**香料炸弹**更扛冷湿天，要不要换？」 |
-| 一瓶搁了 35 天 | 「今天干冷的天正是它的主场，翻出来？」 |
-| 出门归来 | 「今天，刚好吗」淡了点 · 刚好 · 太冲了 · 不合场合。一次点击，收敛明日用法。 |
+---
 
 ## 核心能力
 
-**今日之选** 自动感知实时天气与时段，从你的香柜打分推一瓶，附完整分寸建议。
-
-**不迁就的裁决** good / caution / avoid 三档。真不合适就先说「今天不建议这瓶」，再告诉你坚持要用时怎么补救。
-
-**自然语言场景** 输入「去前任婚礼」「第一次见投资人」，解析出场合、正式度、关系张力、是否饭局，喂进打分与用法。
-
-**发现型钩子** 不等你问：常喷的那瓶今天会翻车，搁置已久的那瓶今天正合适。
-
-**越用越懂你** 答一句「今天，刚好吗」，个人偏移按瓶收敛：嫌冲就少喷，答「刚好」就记住这套配置；高温天答「淡了」归因给天气，不冤枉香水。昨天刚喷的今天自然让位，久置的自然浮起。
-
-**香历** 采纳或反馈的每一瓶自动落进月历，点开任一天是当日快照，可补一句话手记。无香的日子留白。
-
-**演示香柜** 第一次打开就是满配：六瓶示例香水与近一个月的穿香记录。加进你自己的第一瓶，它就整体退场。
-
-**昼夜双主题** 明韵与暗香两套设计语言，右上角随时切。
+- 🎯 **今日之选 + 怎么用** — 自动感知实时天气与此刻时段，从你的香柜打分推一瓶，附完整分寸建议。
+- ⚖️ **不迁就的裁决** — `good / caution / avoid` 三档。真不合适就先说「今天不建议这瓶」，再告诉你坚持要用时怎么补救。
+- 💬 **自然语言场景** — 输入「去前任婚礼」「第一次见投资人」，DeepSeek 解析出场合、正式度、关系张力、是否饭局，喂进打分与用法。
+- 🔔 **发现型钩子** — 不等你问：常喷的那瓶今天会翻车（急性天气 / 反季 / 场合预警），搁置已久的那瓶今天正合适。
+- 🔁 **反馈闭环** — 答一句「今天，刚好吗」，个人偏移按瓶收敛：嫌冲就少喷，答「刚好」就记住这套配置；高温天答「淡了」归因给天气，不冤枉香水。
+- 🔂 **轮换有度** — 昨天刚喷的今天自然让位，久置的自然浮起，兑现「今天喷哪瓶每天不一样」。
+- 📖 **香历** — 采纳或反馈的每一瓶自动落进月历（色点 = 当日主香调），点开任一天是当日快照，可补一句话手记。无香的日子留白。
+- 🪞 **演示香柜** — 第一次打开就是满配：六瓶示例香水与近一个月的穿香记录，推荐、预警、香历、画像全部有内容可看；加进你自己的第一瓶，它就整体退场。
+- 🌗 **昼夜双主题** — 「明韵 / 暗香」两套设计语言，默认明韵，右上角随时切，不跟系统深浅色走。
 
 <div align="center">
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/library-v13.png" width="200" alt="香柜页：香水列表与搜索添加入口"/><br/><sub>香柜</sub></td>
-    <td align="center"><img src="docs/screenshots/journal-v13.png" width="200" alt="香历页：月历色点与当日快照"/><br/><sub>香历</sub></td>
-    <td align="center"><img src="docs/screenshots/profile-v13.png" width="200" alt="我的分寸页：偏好画像与用香记录"/><br/><sub>我的分寸</sub></td>
+    <td align="center"><img src="docs/screenshots/library-v13.png" width="200" alt="香柜页：香水列表与搜索添加入口"/><br/><sub><b>香柜 · 搜名秒加 / 吃灰标记</b></sub></td>
+    <td align="center"><img src="docs/screenshots/journal-v13.png" width="200" alt="香历页：月历色点与当日快照"/><br/><sub><b>香历 · 穿香日历 / 一句话手记</b></sub></td>
+    <td align="center"><img src="docs/screenshots/profile-v13.png" width="200" alt="我的分寸页：偏好画像与用香记录"/><br/><sub><b>我的分寸 · 偏好画像 / 用香记录</b></sub></td>
   </tr>
 </table>
 </div>
 
+---
+
 ## 它怎么想
 
-打分、喷量与留香判定全部由确定性规则计算，可解释、可复现；DeepSeek 只负责听懂你的一句话场景，把算好的事实翻成人话。留香与扩散来自 ledecanteur（Fragrantica 社区数据）的真实投票，不采信厂商宣称；天气来自和风天气。LLM 编出来的数字会被整段拦下，LLM 不可用时照样出推荐。
+**决策权在规则引擎，表达权在 LLM。** 匹配打分、喷量与留香判定全部由确定性规则计算，可解释、可复现、有单测；DeepSeek 只做两件事——听懂自然语言场景、把规则算好的事实翻成人话。天气永远来自和风天气 API，由服务端代理按坐标网格缓存 30 分钟。LLM 的输出还要过一道**数字白名单**：事实里没给过的数字（比如编造的「留香 6.2 小时」）整段拦下、退回规则模板。DeepSeek 超时，规则引擎照样出推荐。
 
-**不伪精确** 留香、喷量、社交距离只给区间与档位，绝不给「留香 6.2 小时」。
+香柜、反馈与香历都存在浏览器 `localStorage`，服务端不保存用户数据；目前没有账号与云同步，「我的」页可导出 / 导入 JSON 备份。
 
-**数据在你手里** 香柜、反馈与香历都存在浏览器本机，服务端不保存；「我的」页可导出、导入备份。
+```mermaid
+flowchart TD
+    Lib["🗄️ 你的香柜<br/>localStorage 持久化"]
+    Weather["🌤️ 和风天气 API<br/>实时温 / 湿 / 风"]
+    Scene["💬 自然语言场景<br/>DeepSeek 解析意图"]
+    Ctx["📍 此刻情境<br/>季节 · 体感 · 时段 · 场合"]
+    Engine["⚙️ 规则引擎<br/>确定性打分 · 可解释"]
+    Pick["🎯 今日之选<br/>喷量 · 位置 · 距离 · 留香 · 裁决"]
+    LLM["✍️ DeepSeek<br/>把事实翻成人话"]
+    Out["💡 有温度的解读"]
+    Tpl["📄 模板兜底<br/>LLM 挂了也不白屏"]
+
+    Weather --> Ctx
+    Scene --> Ctx
+    Lib --> Engine
+    Ctx --> Engine
+    Engine --> Pick
+    Pick --> LLM --> Out
+    Pick -. 降级 .-> Tpl
+```
+
+### 打分公式
+
+`src/lib/scoring.ts`：
+
+```text
+score =  ( 0.38·季节匹配 + 0.19·时段匹配 + 0.43·场合贴合 )   ← 线性主项，权重归一
+       ×  天气乘子 W   ∈ [0.7, 1.3]                          ← 闷热压厚重、寒冷奖暖香
+       ×  质量微调 Q   ∈ [0.96, 1.04]                        ← 社区口碑只作轻推，不替你挑瓶
+       ×  个人偏移（按瓶偏好 · 场合差评）                     ← 你的反馈收敛而来，正负双向、按月衰减
+       ×  场景压制（规避项 · 张力与正式度）                   ← 「别太甜 / 别太冲」硬降权，高张力先压存在感
+
+rank  =  score × 轮换新鲜度 F(d) × 换瓶隐式差评                ← 只动排序，不动裁决与展示
+```
+
+每一项的取值范围、成因与领域依据见[领域规则手册 §6.4](docs/领域规则手册.md#64-权重结构-scoringtsscore)。
+
+---
+
+## 四条戒律
+
+1. **不伪精确** — 留香 / 喷量 / 社交距离只给区间与档位，绝不给「6.2 小时」这类无法验证的假数字；证据不足就明说降级。
+2. **不过度设计** — 不上向量库、不引重后端；规则引擎在浏览器本地毫秒出结果。同一个概念只留一处判据。
+3. **轻冷启动** — 搜名秒加建香柜，不逼用户先填问卷；搜索、扩展目录、手动记一瓶与示例香柜共同保证进门就能用。
+4. **有反馈闭环** — 每次推荐都能被评价、被修正。每个反馈入口都要有明确、可测试的消费路径；兑现不了的入口直接删掉。
+
+---
+
+## 技术栈
+
+| 层 | 选型 | 说明 |
+|---|---|---|
+| 框架 | **Next.js 16.3**（App Router）+ **React 19.2** + **TypeScript 6** | 一仓库承载前端与轻后端 |
+| 后端 | **Route Handlers** | 代理和风 / DeepSeek，保护 key + 缓存 + 限流 + 降级 |
+| 样式 | **Tailwind v4**（CSS-first `@theme` token，无 UI 库） | 昼夜双主题、自持字体 |
+| 决策 | **确定性规则引擎**（纯 TS） | 前端本地打分，可解释可单测 |
+| 检索 | **MiniSearch 7**（自定义中英文分词） | 搜名 / 品牌 / 香调秒加 |
+| 状态 | **Zustand 5** + localStorage | 香柜与反馈持久化，storage 适配层可替换 |
+| 语义 | **DeepSeek**（`deepseek-v4-flash`） | 场景解析（`json_object` + zod 校验）+ 自然语言解读 |
+| 天气 | **和风天气 QWeather** | 服务端调用 + 30 分钟网格缓存 |
+| 校验 / 部署 | **zod** · **Vercel** | 入参校验、GitHub 自动部署 |
+
+---
+
+## 数据
+
+香水数据来自 **ledecanteur**（Fragrantica 社区数据），每一款都带真实社区投票：扩散、留香、四季与日夜分布、带强度的香调、前中后调。
+
+原始 13.2 万款按投票数 ≥ 50 筛得 3.67 万款，再分两层：主目录取热度 Top 1500 做全中文精选（香名 89.0% 有中文名），随首屏加载；其余进扩展集，搜索索引懒加载、详情按分片取。两层合并成一张榜单，再搜不到还有手动记一瓶兜底。没有可靠中文名的 165 款保留英文——错的中文名比英文更糟。
+
+完整管线、分层账目与中文化口径见[数据工程](docs/数据工程.md)。
+
+---
 
 ## 本地运行
 
@@ -84,18 +157,73 @@
 
 ```bash
 npm install
-cp .env.example .env.local   # 可选：调试实时天气或 DeepSeek 时才需要填 key
+cp .env.example .env.local   # 各项 key 的用途与申请入口见文件内注释
 npm run dev                  # http://localhost:3000
 ```
 
-没有 key 也能跑：天气走季节与时段降级，解读走规则模板。
+没有 key 也能跑：天气走「季节 + 时段」降级，解读走规则模板。提交前跑一遍：
 
-## 更多
+```bash
+npm run lint && npm test && npm run build
+```
 
-[技术文档](docs/技术文档.md) 面向开发者与维护者：架构、规则依据、数据管线、文案规范与维护事项。
+数据管线（可选，仓库已含构建产物，需自备 `ledecanteur/perfumes.jsonl`）：
 
-[贡献指南](.github/CONTRIBUTING.md) · [获取帮助](.github/SUPPORT.md) · [安全政策](.github/SECURITY.md)
+```bash
+npm run extract:terms  # 流式抽取精选子集与词表
+npm run build:data     # 应用中文映射 + 预计算 → public/data/perfumes.min.json
+npm run build:ext      # 全量扩展集：搜索索引 + 64 详情分片 → public/data/ext*
+```
 
-## 许可
+门面素材需先起**生产**服务器，`next dev` 的调试悬浮球会入镜：
 
-Copyright © 2026 MrBaoboer。源代码 [AGPL-3.0-only](LICENSE)，附 §7 商标条款：「氛寸」的名称与标识不在授权范围内，部署修改版请换成你自己的名称与标识。`public/data/` 派生自 ledecanteur / Fragrantica 社区数据，[条款单列](LICENSES/LicenseRef-fragrance-data.txt)；随产物分发的字体与依赖见 [THIRD-PARTY-NOTICES](THIRD-PARTY-NOTICES.md)。
+```bash
+npm run build && npx next start -p 3100
+SHOT_BASE=http://localhost:3100 npm run shot   # README 截图 → .scratch/shots/
+SHOT_BASE=http://localhost:3100 npm run og     # 分享卡片与 PWA 图标 → public/
+```
+
+两个脚本用无头浏览器拍站点自己的页面，目前只从 Windows 的固定路径找 Chrome 或 Edge（`scripts/shot.mjs` 的 `CHROME_CANDIDATES`），换平台要先改这份清单。
+
+---
+
+## 目录结构
+
+```text
+src/
+  app/                  今日 / 香柜(library) / 香历(journal) / 我的(profile) 四页 + API 路由
+    api/context/        和风天气代理（保护 key + 网格缓存 + 降级）
+    api/explain/        DeepSeek 解读（只翻译规则事实，失败降级模板）
+    api/parse-intent/   DeepSeek 场景解析（zod 校验，降级关键词启发式）
+  components/           AppProvider / 推荐卡 / 情境栏 / 发现型钩子 / 搜索添加 / 手动记一瓶 …
+  lib/                  types · scoring(打分) · usage(用法) · recommend(编排)
+                        · occasion-priors(场合先验) · format(档位话术单一出处)
+                        · journal(香历) · perfumes(统一搜索 + 扩展目录) · catalog(目录加载)
+                        · numguard(数字白名单) · nudges(发现型钩子) · demo(演示香柜)
+                        · season · hooks · store · ratelimit
+scripts/                零依赖数据构建管线 + 截图 / 分享素材 / 依赖审计门禁
+data/zh-map/            英文→中文映射（accords / notes / brands / names）
+docs/                   产品方案 · 领域规则手册 · 数据工程 · 声音与文案 · 迭代实录 · 截图
+```
+
+---
+
+## 文档
+
+- [产品方案](docs/氛寸-产品方案.md) — 定位、用户、产品模型、关键决策、指标与路线图。
+- [领域规则手册](docs/领域规则手册.md) — 每条打分与用法规则的领域依据，逐条标了证据等级。
+- [数据工程](docs/数据工程.md) — 13.2 万 → 3.67 万 → 中文映射的完整管线。
+- [声音与文案](docs/声音与文案.md) — 术语、语气与表达边界。改用户可见的字之前先读它。
+- [迭代实录](docs/迭代实录.md) — 上线后每一轮迭代的动因、取舍与沉淀下来的纪律。
+
+---
+
+## 参与 · 许可
+
+- **贡献**：欢迎 Issue 与 PR；动手前请读[贡献指南](.github/CONTRIBUTING.md)。
+- **获取帮助**：[SUPPORT](.github/SUPPORT.md) 有分流表。
+- **行为准则**：本项目遵循 [Contributor Covenant](.github/CODE_OF_CONDUCT.md)。
+- **安全**：发现漏洞请按[安全政策](.github/SECURITY.md)私下报告，勿开公开 Issue。
+- **治理**：谁说了算、什么不进主线见[贡献指南 · 治理](.github/CONTRIBUTING.md#治理--governance)。
+- **许可**：Copyright © 2026 MrBaoboer。源代码 **AGPL-3.0-only**，附 §7 商标条款——「氛寸」的名称与标识不在授权范围内（见 [LICENSE](LICENSE)）。部署修改版请依 §13 向使用者提供对应源码，并换成你自己的名称与标识。
+- **数据与第三方**：`public/data/` 派生自 ledecanteur / Fragrantica 社区数据，不随代码按 AGPL 授权，条款单列（[LicenseRef-fragrance-data](LICENSES/LicenseRef-fragrance-data.txt)）；随产物分发的字体与依赖见 [THIRD-PARTY-NOTICES](THIRD-PARTY-NOTICES.md)。

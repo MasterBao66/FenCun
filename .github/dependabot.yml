@@ -40,8 +40,8 @@ updates:
       - dependency-name: "typescript"
         update-types: ["version-update:semver-major"]
       # @types/node 跟随运行时大版本，不跳到领先运行时的那一版——那会拿到当前 Node 上并不存在
-      # 的 API 类型。运行时升级要一起动的七处：package.json 的 engines.node、ci.yml 的
-      # node-version、本条 ignore，以及 README「本地运行」、技术文档「运行时」与两份 CONTRIBUTING 的「本地开发」。
+      # 的 API 类型。运行时升级要一起动的六处：package.json 的 engines.node、ci.yml 的
+      # node-version、本条 ignore，以及 README「本地运行」与两份 CONTRIBUTING 的「本地开发」。
       - dependency-name: "@types/node"
         update-types: ["version-update:semver-major"]
   # 保持 CI 里钉了 SHA 的第三方 Action 也能被跟进更新。

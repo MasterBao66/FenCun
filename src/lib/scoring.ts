@@ -157,7 +157,7 @@ export function heavyDominates(p: Perfume, absMin: number): boolean {
 //
 // 修法：按票数把原始适配度向**全库经验均值**收缩。没有数据 → 落在平均水平，
 // 而不是落在满分。锚点不是拍的，是在 1500 款主目录 × 四季共 6000 个样本上实测出来的。
-const SEASON_ANCHOR = 0.671; // 全库 seasonFit 均值（实测，见 docs/技术文档.md §5.7）
+const SEASON_ANCHOR = 0.671; // 全库 seasonFit 均值（实测，见 docs/领域规则手册.md）
 const DAYPART_ANCHOR = 0.771; // 全库 daypartFit 均值（实测）
 const CONF_K = 60; // 票数半衰点：60 票时置信度 0.5；主目录最低 1131 票 → 置信度 ≥0.95，几乎不受影响
 
