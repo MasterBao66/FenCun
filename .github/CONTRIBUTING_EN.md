@@ -10,66 +10,41 @@
 - 📝 Docs, copy, accessibility, and i18n improvements
 - ✨ New capabilities aligned with the product's positioning (open an issue first if the proposal moves the product boundary)
 
-Not a good fit: see the Four Commandments below and the "no" list under Governance.
+Directions that do not fit are listed under Governance below.
 
-## Before you start: the Four Commandments (hard constraints)
+## Hard constraints
 
-Every contribution must uphold these (full text and rationale in the [README](../README.md#四条戒律), in Chinese):
+Every contribution must uphold the [Four Commandments](../README.md#四条戒律) (README, in Chinese): no false precision · no over-engineering · light cold-start · closed feedback loop.
 
-1. **No false precision** — longevity, sprays, and social distance are given only as ranges and tiers.
-2. **No over-engineering** — no vector DB, no heavy backend; one concept, one criterion, in one place.
-3. **Light cold-start** — search a name to add a bottle; no mandatory questionnaire.
-4. **Closed feedback loop** — users must be able to rate and correct any new recommendation or judgment, and the feedback must have a testable consumption path.
+Architecture:
 
-## Architecture notes
-
-- **The rule engine decides; the LLM only puts it into words.** Match scoring and the sprays / distance / longevity verdicts must come from deterministic rules (explainable, reproducible, unit-testable); DeepSeek only parses natural-language scenarios and turns the computed facts into plain language.
-- **Weather always comes from the QWeather API — never invented by the LLM.**
-- **Graceful degradation first** — DeepSeek timeouts and weather/geolocation failures must have fallbacks; core recommendations still work and the product never shows a blank screen.
+- **The rule engine decides; the LLM only puts it into words.** Scoring, sprays, distance, longevity, and verdicts must be deterministic rules; DeepSeek only parses natural-language scenarios and turns the computed facts into plain language.
+- **Weather comes only from the QWeather API**, never invented by the LLM.
+- **Graceful degradation first.** DeepSeek timeouts and weather or geolocation failures must have fallbacks; core recommendations still work.
 - **Prefer the local rules and static data that already exist**; justify any new infrastructure.
 
-The domain evidence behind the rules is in [领域规则手册](../docs/领域规则手册.md) — before adding a new criterion, check the [single-entry-point table](../docs/领域规则手册.md#同一概念的单一入口) for an existing equivalent. Read [声音与文案](../docs/声音与文案.md) before changing any user-visible wording. Both are in Chinese.
+Before you start (all in Chinese):
+
+- Changing a rule: read the [domain rules handbook](../docs/领域规则手册.md) and check the [single-entry-point table](../docs/领域规则手册.md#同一概念的单一入口) for an existing equivalent before adding a criterion;
+- Changing user-visible wording: read [声音与文案](../docs/声音与文案.md);
+- Changing the data pipeline: read [数据工程](../docs/数据工程.md).
 
 ## Local development
 
-Requires **Node 24** (Active LTS). `engines.node` in `package.json` is the source of truth — Vercel reads it directly and it overrides the dashboard setting; CI's `node-version` is kept on the same major. Installing under another major prints an `EBADENGINE` warning.
+Environment, configuration, tests, and pre-submit checks are in [开发与维护](../docs/开发与维护.md); install and run commands are in the README's [本地运行](../README.md#本地运行) section. It runs without keys.
 
-```bash
-git clone https://github.com/MrBaoboer/FenCun.git
-cd FenCun
-npm ci
-cp .env.example .env.local   # optional: only needed to exercise live weather or DeepSeek
-npm run dev                  # http://localhost:3000
-```
-
-It runs without keys: weather falls back to season + time of day, and explanations fall back to rule templates. See the [directory structure](../README.md#目录结构) section of the README (Chinese).
-
-## Pre-submit checklist
-
-```bash
-npm run lint    # code style
-npm test        # unit tests — must pass if you touched the engine, journal, search, store, nudges, or the API routes; add cases too
-npm run build   # make sure it builds
-```
-
-Docs-only PRs can skip these three, but do check them yourself: links resolve, commands run, terminology matches `format.ts`, and the Chinese and English files still say the same thing.
+If you touched the engine, journal, search, store, nudges, or the API routes, `npm test` must pass and you should add cases. Docs-only PRs can skip the build, but check yourself: links resolve, commands run, terminology matches `format.ts`, and the Chinese and English files still say the same thing.
 
 ## Commit conventions
 
-- Use [Conventional Commits](https://www.conventionalcommits.org/): `feat:` / `fix:` / `docs:` / `refactor:` / `test:` / `polish:`, and so on. Writing commit bodies in Chinese is perfectly fine — it matches the existing history.
-- Signing off your commits is **encouraged, not required**:
-
-  ```bash
-  git commit -s -m "fix: ……"
-  ```
-
-  `-s` adds a `Signed-off-by` line, certifying under the [Developer Certificate of Origin](https://developercertificate.org/) that you have the right to submit the code. CI does not check it.
+- Use [Conventional Commits](https://www.conventionalcommits.org/): `feat:` / `fix:` / `docs:` / `refactor:` / `test:` / `polish:`, and so on. Commit bodies are written in Chinese, matching the existing history.
+- Signing off is encouraged, not required: `git commit -s` adds a `Signed-off-by` line, certifying under the [Developer Certificate of Origin](https://developercertificate.org/) that you have the right to submit the code. CI does not check it.
 
 ## Pull request flow
 
 1. Branch off `main`; keep commits focused and traceable.
-2. Describe the **motivation** and **how you verified** the change; if you touched the engine, attach a before/after comparison or tests.
-3. Target branch is `main`; CI / build must pass.
+2. Describe the motivation and how you verified the change; if you touched the engine, attach a before/after comparison or tests.
+3. Target branch is `main`; CI must pass.
 
 ## Governance
 
